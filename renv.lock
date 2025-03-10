@@ -25,14 +25,6 @@
       "Hash": "065ae649b05f1ff66bb0c793107508f5",
       "Requirements": []
     },
-    "MASS": {
-      "Package": "MASS",
-      "Version": "7.3-57",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "71476c1d88d1ebdf31580e5a257d5d31",
-      "Requirements": []
-    },
     "Matrix": {
       "Package": "Matrix",
       "Version": "1.4-1",
