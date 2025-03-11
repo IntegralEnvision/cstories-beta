@@ -1,0 +1,60 @@
+Package: CStoriesBeta
+Title: CStoriesBeta
+Version: 0.0.1.0000
+Authors@R: 
+    person("firstname", "lastname", , "your@email.com", role = c("aut", "cre"))
+Description: CStoriesBeta
+License: What license is it under?
+Imports: 
+    aws.s3,
+    aws.signature,
+    bs4Dash,
+    bsicons,
+    bslib,
+    cicerone (>= 1.0.5.9000),
+    cli,
+    cmocean,
+    config (>= 0.3.2),
+    dplyr,
+    DT,
+    echarts4r,
+    ggplot2,
+    ggpubr,
+    glue,
+    golem (>= 0.4.1),
+    grDevices,
+    htmltools,
+    jsonlite,
+    leaflet,
+    leafpop,
+    lubridate,
+    magick,
+    openair,
+    paws,
+    plotly,
+    purrr,
+    raster,
+    reactable,
+    readr,
+    readxl,
+    reshape2,
+    rvest,
+    sf,
+    shiny (>= 1.7.4.1),
+    shinybrowser,
+    shinyjs,
+    shinyWidgets,
+    stats,
+    stringr,
+    terra,
+    tidyr,
+    tidyselect,
+    tidyverse,
+    viridisLite,
+    waiter
+Suggests: 
+    testthat
+Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
