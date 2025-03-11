@@ -47,6 +47,8 @@ RUN R -q -e "options(warn=2); \
              install.packages('remotes'); \
              remotes::install_version('renv', '${RENV_VERSION}')"
 
+RUN R -q -e "install.packages(c('aws.s3', 'aws.signature', 'bs4Dash', 'bsicons', 'cicerone', 'cmocean', 'config', 'DT', 'echarts4r', 'ggpubr', 'golem', 'leafpop', 'magick', 'openair', 'paws', 'plotly', 'reactable', 'reshape2', 'sf', 'shinybrowser', 'shinyjs', 'shinyWidgets', 'waiter'), dependencies = TRUE, repos = 'https://cloud.r-project.org/')" > /install_packages.log 2>&1
+
 # Install the R packages
 WORKDIR /build
 COPY renv.lock /build/renv.lock
@@ -59,8 +61,8 @@ ADD copy_env.sh /etc/cont-init.d/04_copy_env.sh
 # Add local files and folders
 #COPY R           /build/package_dir/R
 #COPY inst        /build/package_dir/inst
-#COPY NAMESPACE   /build/package_dir/NAMESPACE
-#COPY DESCRIPTION /build/package_dir/DESCRIPTION
+COPY NAMESPACE   /build/package_dir/NAMESPACE
+COPY DESCRIPTION /build/package_dir/DESCRIPTION
 COPY . /build/package_dir
 
 # Install the app package
